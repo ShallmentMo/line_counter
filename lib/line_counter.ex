@@ -1,0 +1,2 @@
+defmodule LineCounter do
+end
