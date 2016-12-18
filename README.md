@@ -1,24 +1,17 @@
 # LineCounter
 
-**TODO: Add description**
+## Description
 
-## Installation
+At the beginning, I just want to know how many lines of code in [plug](https://github.com/elixir-lang/plug). Then I think why not use elixir to write a tool to count that. So we got this.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+Now this is the first step: it can count the lines. But it still have so many things to do. Here is something I can think of:
 
-  1. Add `line_counter` to your list of dependencies in `mix.exs`:
+* should use processes to do concurrent
+* maybe we can benchmark about this and others
+* public to hex.pm and can build cmd which can be used in shell.
 
-    ```elixir
-    def deps do
-      [{:line_counter, "~> 0.1.0"}]
-    end
-    ```
+## Others
 
-  2. Ensure `line_counter` is started before your application:
+Thanks to *Programming Elixir*, I learned a lot from it.
 
-    ```elixir
-    def application do
-      [applications: [:line_counter]]
-    end
-    ```
-
+This is a gift to Xuxiao, hoping it's qualified.
