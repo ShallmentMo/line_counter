@@ -18,6 +18,32 @@ $ MIX_ENV=bench mix compile
 $ MIX_ENV=bench mix bench
 ```
 
+### my computer infos
+
+```
+MacBook Pro (Retina, 13-inch, Early 2015)
+Processor 2.7 GHz Intel Core i5
+Memory 8 GB 1867 MHz DDR3
+```
+
+### with commit `7a93ccd97124832317a9eb9a49365b17262869f0`
+
+```
+Settings:
+  duration:      1.0 s
+
+## BasicBench
+[23:15:09] 1/2: . bench(the result is 33)
+[23:15:11] 2/2: ./mix.exs bench(the result is 3528)
+
+Finished in 4.12 seconds
+
+## BasicBench
+benchmark name   iterations   average time
+./mix.exs bench       10000   158.36 µs/op
+. bench                  50   38179.26 µs/op
+```
+
 ## Others
 
 Thanks to *Programming Elixir*, I learned a lot from it.
