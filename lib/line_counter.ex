@@ -22,9 +22,16 @@ defmodule LineCounter do
       |> Enum.map(&(count_line(&1)))
       |> Enum.reduce(0, fn(x, acc) -> x + acc end)
 
+    me = self
+
     folder_line_count = path
       |> all_folders
-      |> Enum.map(&(process_single(&1)))
+      |> Enum.map(fn (elem) ->
+           spawn_link fn -> (send me, { self, process_single(elem) }) end
+        end)
+      |> Enum.map(fn (pid) ->
+           receive do { ^pid, result } -> result end
+        end)
       |> Enum.reduce(0, fn(x, acc) -> x + acc end)
 
     file_line_count + folder_line_count
