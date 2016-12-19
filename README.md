@@ -50,6 +50,30 @@ benchmark name                     iterations   average time
 ../elixir bench(result is 133717)           2   787376.00 µs/op
 ```
 
+### with commit `98718034c9dccdc8babc0f351378b29e3c867331`
+
+```
+Settings:
+  duration:      1.0 s
+
+## BasicBench
+[23:53:07] 1/5: . bench(result is 3979)
+[23:53:09] 2/5: ../elixir bench(result is 133717)
+[23:53:11] 3/5: ../phoenix bench(result is 26020)
+[23:53:13] 4/5: ../plug bench(result is 10638)
+[23:53:16] 5/5: ./mix.exs bench(result is 33)
+
+Finished in 12.15 seconds
+
+## BasicBench
+benchmark name                     iterations   average time
+./mix.exs bench(result is 33)           10000   193.09 µs/op
+. bench(result is 3979)                    50   39007.82 µs/op
+../plug bench(result is 10638)             50   53664.90 µs/op
+../phoenix bench(result is 26020)          10   154178.90 µs/op
+../elixir bench(result is 133717)           2   528516.00 µs/op
+```
+
 ## Others
 
 Thanks to *Programming Elixir*, I learned a lot from it.
