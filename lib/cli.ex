@@ -6,6 +6,12 @@ defmodule LineCounter.CLI do
 
   def main(argv) do
     argv
+      |> run
+      |> IO.puts
+  end
+
+  def run(argv) do
+    argv
       |> parse_args
       |> process
   end
@@ -33,6 +39,6 @@ defmodule LineCounter.CLI do
   end
 
   def process(paths) do
-    LineCounter.process(paths) |> IO.puts
+    LineCounter.process(paths)
   end
 end

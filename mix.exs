@@ -28,7 +28,7 @@ defmodule LineCounter.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:benchfella, "~> 0.3", only: :bench}]
   end
 
   defp escript_config do

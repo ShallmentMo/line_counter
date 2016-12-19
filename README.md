@@ -10,6 +10,14 @@ Now this is the first step: it can count the lines. But it still have so many th
 * maybe we can benchmark about this and others
 * public to hex.pm and can build cmd which can be used in shell.
 
+## Benchamarking
+
+```
+$ mix deps.get
+$ MIX_ENV=bench mix compile
+$ MIX_ENV=bench mix bench
+```
+
 ## Others
 
 Thanks to *Programming Elixir*, I learned a lot from it.
