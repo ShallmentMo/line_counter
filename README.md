@@ -33,15 +33,21 @@ Settings:
   duration:      1.0 s
 
 ## BasicBench
-[23:15:09] 1/2: . bench(the result is 33)
-[23:15:11] 2/2: ./mix.exs bench(the result is 3528)
+[23:54:13] 1/5: . bench(result is 3979)
+[23:54:17] 2/5: ../elixir bench(result is 133717)
+[23:54:19] 3/5: ../phoenix bench(result is 26020)
+[23:54:23] 4/5: ../plug bench(result is 10638)
+[23:54:26] 5/5: ./mix.exs bench(result is 33)
 
-Finished in 4.12 seconds
+Finished in 15.04 seconds
 
 ## BasicBench
-benchmark name   iterations   average time
-./mix.exs bench       10000   158.36 µs/op
-. bench                  50   38179.26 µs/op
+benchmark name                     iterations   average time
+./mix.exs bench(result is 33)           10000   197.57 µs/op
+. bench(result is 3979)                    50   56657.64 µs/op
+../plug bench(result is 10638)             50   59042.14 µs/op
+../phoenix bench(result is 26020)          10   199679.90 µs/op
+../elixir bench(result is 133717)           2   787376.00 µs/op
 ```
 
 ## Others
